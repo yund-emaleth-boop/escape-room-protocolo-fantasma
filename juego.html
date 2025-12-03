@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROTOCOLO FANTASMA: ENGRANAJE CERO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="scanline-overlay"></div>
+    
+    <div class="contenedor-nucleo" id="juego-contenedor">
+        
+        <div id="progreso-area" style="text-align: center; color: var(--color-secondary-neon); margin-bottom: 20px;">
+            Constante [Cargando...]
+        </div>
+
+        <h1>Cargando Nivel...</h1>
+        
+        <div id="enigma-area">
+            <p id="enigma-texto">...</p>
+            <p class="pista"></p>
+        </div>
+
+        <div id="interaccion-area">
+            <label for="respuesta" class="resaltado">Introduce la Constante (Clave):</label>
+            <div style="display: flex; align-items: center;">
+                <input type="text" id="respuesta" placeholder="Tu respuesta aquí" autocomplete="off">
+                <button onclick="verificarRespuesta()">Verificar</button>
+            </div>
+        </div>
+
+        <div id="mensaje-area"></div>
+
+        <div id="navegacion-area" style="display: flex; justify-content: space-between; margin-top: 30px;">
+            <button id="boton-anterior" onclick="cambiarNivel(-1)" disabled>← Anterior</button>
+            <button id="boton-siguiente" onclick="cambiarNivel(1)" disabled>Siguiente →</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
